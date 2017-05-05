@@ -20,9 +20,23 @@ func emojiLove(/* add parameters here */) {
 
 //: ### Exercise 15
 //: The function `median` should take three `Int` parameters and return the `Int` value in the middle.
-func median(/* add parameters here */) /* define the return type */ {
-    /* add function implementation here */
-}
+func median(/* add parameters here */ num1:Int , num2 : Int , num3 : Int)->Int /* define the return type */ {
+ 
+    if (num2 < num1) && (num1 < num3) || (num3 < num1) && (num1 < num2) {
+        return num1
+    }else if (num1 < num2) && (num2 < num3) || (num3 < num2) && (num2 < num1) {
+        return num2
+    }else if (num1 < num3 ) && (num3 < num2) || (num2 < num3) && (num3 < num1) {
+        return num3
+    }else if (num1 == num2) {
+        return num2
+    }else if (num2 == num3){
+        return num3
+    }else {
+        return -1
+    }
+    }
+
 
 /* Example Function Call
  
